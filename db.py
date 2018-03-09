@@ -29,7 +29,7 @@ def register(username, password, neighborhood, pic_url):
 
 def addTrip(lat, lon, desc, avl):
 	trp = {'lat': lat, 'lon':lon, 'description':desc, 'availablity':avl}
-	r = db.trip.find(trp)
+	r = db.trip.insert_one(trp)
 	if r.count() == 0:
 		return False
 	if r.count() == 1:
@@ -42,9 +42,10 @@ def allTrips():
 	op = []
 	for cr in r:
 		op.append(cr)
-	print(cr)
+		print(cr)
 	return op
 
+db.user.delete_many({})
 register('viji','viji','1.2,3.4','www')
 print(login('viji','viji'))
 
