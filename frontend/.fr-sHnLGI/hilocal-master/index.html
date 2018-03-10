@@ -1,0 +1,64 @@
+<!doctype>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+	<link href='css/styles.css' rel='stylesheet' />
+</head>
+<body>
+	<div id="sidebar">
+		<p id="sidebar-title">HiLocal</p>
+		<p id="sidebar-subtitle">Know your city.</p>
+		<div id="sidebar-buttons-container">
+			<div id="sidebar-login">Login</div>
+			<div id="sidebar-register">Register</div>
+		</div>
+		<div id="sidebar-login-container">
+			<input type="text" id="login-email" placeholder="Email" />
+			<input type="password" id="login-password" placeholder="Password" />
+			<div id="sidebar-login-form">Login</div>
+		</div>
+		<div id="sidebar-register-container">
+			<input type="text" id="register-name" placeholder="Name" />
+			<input type="text" id="register-phone" placeholder="Phone" />
+			<input type="text" id="register-email" placeholder="Email" />
+			<input type="password" id="register-password" placeholder="Password" />
+			<div id="sidebar-register-form">Register</div>
+		</div>
+		<div id="sidebar-main-container">
+			<div id="sidebar-submit">Add meetup</div>
+			<div id="sidebar-activity">Add activity</div>
+			<div id="sidebar-logout">Logout</div>
+		</div>
+		<div id="sidebar-meetup-container">
+			<input type="text" id="add-location" placeholder="Location" />
+			<input type="text" id="add-description" placeholder="Description" />
+			<input type="text" id="add-time" placeholder="Time(s)" />
+			<div id="sidebar-submit-form">Add tour</div>
+		</div>
+		<div id="sidebar-activity-container">
+			<input type="text" id="activity-location" placeholder="Location" />
+			<input type="text" id="activity-description" placeholder="Description" />
+			<input type="text" id="activity-time" placeholder="Time(s)" />
+			<div id="sidebar-activity-form">Add activity</div>
+		</div>
+	</div>
+	<div id="darken"></div>
+	<div id="alert">
+		<p id="alert-title">Confirm meetup!</p>
+		<p id="alert-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed pellentesque nibh. Pellentesque vitae maximus diam, a feugiat enim. In dignissim, orci posuere sodales vehicula, ex dui laoreet tellus, in mattis diam leo eu est.</p>
+		<div id="alert-buttons-container">
+			<div id="alert-confirm">Confirm</div>
+			<div id="alert-cancel">Cancel</div>
+		</div>
+	</div>
+	<div id="phone-alert">
+		<p id="alert-title">Woohoo!</p>
+		<p id="phone-alert-description">Bob's phone number is +1 06 686 5435. He'll see you at 3:00pm.</p>
+		<div id="alert-buttons-container">
+			<div id="phone-alert-confirm">Awesome!</div>
+		</div>
+	</div>
+	<div id='map'></div>
+	<script src="scripts/main.js"></script>
+</body>
